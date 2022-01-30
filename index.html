@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .inner-container {
+        position: relative;
+        z-index: 2;
+        color: white
+    }
+
+
+    #canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    label {
+        color: 'white'
+    }
+
+    #paths {
+        position: absolute;
+        z-index: 3
+    }
+</style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class='inner-container'>
+            <label for="paths">Change Path: </label>
+            <select name="paths" id="paths">
+                <option value="circle" title="circle">Circle</option>
+                <option value="x-axis" title="x-axis">X-Axis</option>
+                <option value="y-axis" title='y-axis'>Y-Axis</option>
+
+            
+            </select>
+        
+        </div>
+            
+        <canvas id='canvas'></canvas>
+
+    </div>
+
+    
+    
+    <script src="index.js"></script>
+</body>
+</html>
